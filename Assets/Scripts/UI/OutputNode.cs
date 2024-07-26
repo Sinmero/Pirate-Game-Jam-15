@@ -1,0 +1,62 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Runtime.InteropServices;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class OutputNode : ConnectionNode
+{
+    public override void OnStart()
+    {
+        base.OnStart();
+        _machine.onResourceTypeChange += SetNodeIcon; //change the icon when machine resource type changes
+        _machine.onResourceTypeChange += InputIconChange;
+        onConnect += InputIconChange;
+        onConnect += OnClick; //probably bad idea
+        onDisconnect += InputIconReset;
+        _machine.onResourceAmountChange += AmountChange;
+    }
+
+
+
+    public void AmountChange (int amount) {
+        onAmountChange?.Invoke(amount);
+    }
+
+
+
+    public override void OnClick()
+    {
+        base.OnClick();
+
+        if (_machine._resource == "" || _connectionLine == null) return;
+        _resourceColor = Items.instance._itemDictionary[_machine._resource]._itemColor;
+
+        _connectionLine.startColor = _resourceColor;
+        _connectionLine.endColor = _resourceColor;
+    }
+
+
+
+    public void InputIconChange()
+    {
+        if(_otherConnectionNode == null) return;
+        if (_machine._resource == "") return;
+
+        SystemLogger.instance.Log($"Changing {_otherConnectionNode} icon", this);
+        Sprite iconSprite = Items.instance._itemDictionary[_machine._resource]._icon;
+        _otherConnectionNode._icon.sprite = iconSprite;
+
+        _otherConnectionNode._circleSprite.color = Items.instance._itemDictionary[_machine._resource]._itemColor;
+    }
+
+
+    public void InputIconReset() {
+        if(_otherConnectionNode == null) return;
+        SystemLogger.instance.Log($"Resetting {_otherConnectionNode} icon", this);
+        _otherConnectionNode._icon.sprite = null;
+
+        _otherConnectionNode._circleSprite.color = Color.grey;
+    }
+}
