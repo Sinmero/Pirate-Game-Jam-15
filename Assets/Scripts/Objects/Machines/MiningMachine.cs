@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class MiningMachine : Machine
@@ -25,12 +26,6 @@ public class MiningMachine : Machine
     }
 
 
-    private void Destroy()
-    {
-        _resourceVein.gameObject.SetActive(true); //return the vein when dissassembled
-    }
-
-
 
     public override void OnInteract(Interactor interactor)
     {
@@ -48,5 +43,37 @@ public class MiningMachine : Machine
 
         _resourceAmount += Inventory.instance[_resource]; //putting appropriate resource from inventory to factory
         Inventory.instance[_resource] = 0;
+    }
+
+
+
+    public override void OnInteractHold(Interactor interactor)
+    {
+        base.OnInteractHold(interactor);
+
+        Inventory.instance["9"] += 1; //Returning the machine cost to player
+
+        Inventory.instance[_resource] += _resourceAmount; //giving the player contained resourses from this machine
+
+        _resourceVein.gameObject.SetActive(true);
+
+        Destroy(gameObject);
+    }
+
+
+
+    public override void OnHoldStart(Interactor interactor)
+    {
+        base.OnHoldStart(interactor);
+
+        _dissolveAnimation.StartAnimation(_interactTime);
+    }
+
+
+
+    public override void OnHoldRelease()
+    {
+        base.OnHoldRelease();
+        _dissolveAnimation.StopAnimation();
     }
 }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -15,6 +17,9 @@ public abstract class Machine : Interactable
     private int _rsr = 0;
     public int _resourceAmount {get{return _rsr;} set{_rsr = value; onResourceAmountChange?.Invoke(_rsr);}}
     [SerializeField] private GameObject _uiGO;
+    public DissolveAnimation _dissolveAnimation;
+
+
 
     void Start()
     {

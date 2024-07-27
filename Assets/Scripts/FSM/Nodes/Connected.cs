@@ -13,8 +13,6 @@ public class Connected : NodeState
     public override void OnClick()
     {
         base.OnClick();
-        // _parentConnectionNode._otherConnectionNode.onDisconnect?.Invoke();
-        // _parentConnectionNode.onDisconnect?.Invoke();
 
         ConnectNodes.instance.ClearLine(_parentConnectionNode._connectionLine);
         _parentConnectionNode._otherConnectionNode._connectionLine = null;

@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 7983248841423465202}
   - component: {fileID: 4788921908478142443}
   - component: {fileID: 7433487106006804302}
+  - component: {fileID: -4352279908023801017}
   m_Layer: 0
   m_Name: Factory
   m_TagString: Untagged
@@ -96,7 +97,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 6b9a4bd7ba4089c4a8fd2aa4aeaf08e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -189,11 +190,39 @@ MonoBehaviour:
   _interactableName: Factory
   _actionName: interact with
   _interactKey: 
+  _interactTime: 1
   _uiGO: {fileID: 1275407719391968086}
+  _dissolveAnimation: {fileID: -4352279908023801017}
+  _Inspection:
+  - one: 0
+    two: 0
+    three: 0
+    four: 0
+  - one: 0
+    two: 0
+    three: 0
+    four: 0
+  inspector:
+    one: 0
+    two: 0
+    three: 0
+    four: 0
   _node1: {fileID: 7831814875553760219}
   _node2: {fileID: 3315277344740990890}
   _node3: {fileID: 7908484538818423090}
   _recipe: 
+--- !u!114 &-4352279908023801017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277438289071029030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d27263a0cc1942870e2442bd91dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2619800790468057376
 PrefabInstance:
   m_ObjectHideFlags: 0

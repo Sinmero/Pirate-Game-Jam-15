@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2249913366756789870
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HologramUI
-  m_Shader: {fileID: -6465566751694194690, guid: 03ffe249a721ff147a7db6674cae9965, type: 3}
+  m_Name: Dissolve
+  m_Shader: {fileID: -6465566751694194690, guid: e5f2469d4873735479bdc517b8d49dda, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,14 +36,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _HologramTex_1:
-        m_Texture: {fileID: 2800000, guid: a761a1cb5555fe246b16511a07bbb275, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _HologramTex_2:
-        m_Texture: {fileID: 2800000, guid: 86e628016be7e9141bfabbdc0b049456, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: a723dd8c58a3af84680c129bd84cf43d, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -49,25 +54,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_218ad3e1303d46faae02697479d49db8: 0.1
-    - _AlphaStr: 0.5
-    - _DistortionLinesNum: 2
-    - _Speed_1: 0.2
+    - _Dissolve: -0.1
+    - _Scale: 15
     m_Colors:
-    - _Distortion: {r: 0.015, g: 0, b: 0, a: 0}
-    - _TexColor: {r: 0.9108217, g: 0, b: 3.2747207, a: 1}
+    - Vector2_6aff209075624983a2b67abeee40265d: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 3.168628, g: 0.9780275, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &4259669682150194246
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 9

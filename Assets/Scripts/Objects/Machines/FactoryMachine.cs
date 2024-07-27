@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FactoryMachine : Machine
@@ -17,9 +18,9 @@ public class FactoryMachine : Machine
         _node2.onConnect += NodeConnected;
         _node3.onConnect += NodeConnected;
 
-        _node1.onDisconnect += NodeDisconnected;
-        _node2.onDisconnect += NodeDisconnected;
-        _node3.onDisconnect += NodeDisconnected;
+        _node1.afterDisconnect += NodeDisconnected;
+        _node2.afterDisconnect += NodeDisconnected;
+        _node3.afterDisconnect += NodeDisconnected;
     }
 
 
@@ -54,6 +55,7 @@ public class FactoryMachine : Machine
     public void GetRecipe()
     {
         _recipe = GetOtherResouceType(_node1) + GetOtherResouceType(_node2) + GetOtherResouceType(_node3);
+        Debug.Log(_recipe);
     }
 
 
@@ -63,7 +65,7 @@ public class FactoryMachine : Machine
         if (_currentCoroutine != null) StopCoroutine(_currentCoroutine);
 
         if (!Items.instance._recipes.ContainsKey(_recipe)) return; //no such recipes exist
-            
+
         _resource = Items.instance._recipes[_recipe];
 
         GameplayLogger.instance.Log($"{_resource} recipe was set on {this.name}", this);
@@ -104,5 +106,35 @@ public class FactoryMachine : Machine
 
         _resourceAmount += Inventory.instance[_resource]; //putting appropriate resource from inventory to factory
         Inventory.instance[_resource] = 0;
+    }
+
+
+
+    public override void OnInteractHold(Interactor interactor)
+    {
+        base.OnInteractHold(interactor);
+
+        Inventory.instance["9"] += 1; //Returning the machine cost to player
+
+        if (_resource != "") Inventory.instance[_resource] += _resourceAmount; //giving the player contained resourses from this machine
+
+        Destroy(gameObject);
+    }
+
+
+
+    public override void OnHoldStart(Interactor interactor)
+    {
+        base.OnHoldStart(interactor);
+
+        _dissolveAnimation.StartAnimation(_interactTime);
+    }
+
+
+
+    public override void OnHoldRelease()
+    {
+        base.OnHoldRelease();
+        _dissolveAnimation.StopAnimation();
     }
 }

@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour
     public string _actionName = "interact with";
     [HideInInspector] public string _interactKey;
     private BoxCollider2D _boxCollider2D;
-    public float _interactTime;
+    public float _interactTime = 1;
 
 
     void Start()
@@ -39,14 +39,18 @@ public class Interactable : MonoBehaviour
     }
 
 
-
+    private Coroutine _timer;
     public virtual void InteractHold(Interactor interactor) {
-        Coroutine timer = null;
         if(Input.GetKeyDown(Controls.keys._interactHold)) {
-            GameplayLogger.instance.Log($"{interactor._parentGO.name} if holding interaction with {_interactableName}", this);
-            timer = StartCoroutine(HoldTimer(interactor));
+            GameplayLogger.instance.Log($"{interactor._parentGO.name} holding interaction with {_interactableName}", this);
+            OnHoldStart(interactor);
+            _timer = StartCoroutine(HoldTimer(interactor));
         }
-        if(Input.GetKeyUp(Controls.keys._interactHold)) StopCoroutine(timer);
+        if(Input.GetKeyUp(Controls.keys._interactHold)) {
+            GameplayLogger.instance.Log($"{interactor._parentGO.name} released interaction with {_interactableName}", this);
+            StopCoroutine(_timer);
+            OnHoldRelease();
+        }
     }
 
 
@@ -67,6 +71,14 @@ public class Interactable : MonoBehaviour
 
 
     public virtual void OnInteractHold(Interactor interactor) { }
+
+
+
+    public virtual void OnHoldStart(Interactor interactor) { }
+
+
+
+    public virtual void OnHoldRelease() { }
 
 
 
@@ -93,7 +105,7 @@ public class Interactable : MonoBehaviour
 
 
 
-    private string GetPopupMessage()
+    public virtual string GetPopupMessage()
     {
         return $"Press {_interactKey} to {_actionName} {_interactableName}";
     }

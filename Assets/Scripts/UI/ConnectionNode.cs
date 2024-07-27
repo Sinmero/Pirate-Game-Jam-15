@@ -10,8 +10,6 @@ using UnityEngine;
 public abstract class ConnectionNode : MonoBehaviour, IClickable
 {
     public string _nodeType;
-    // private int _rsrAmount;
-    // [HideInInspector] public int _resourceAmount {get{return _rsrAmount;} set{_rsrAmount = value; onAmountChange?.Invoke();}}
     private CircleCollider2D _circleCollider2D;
     public SpriteRenderer _icon;
     [HideInInspector] public  SpriteRenderer _circleSprite;
@@ -19,7 +17,7 @@ public abstract class ConnectionNode : MonoBehaviour, IClickable
 
 
     private ConnectionNode _cnNode;
-    public ConnectionNode _otherConnectionNode {get{return _cnNode;} set{if(value == null) onDisconnect?.Invoke(); _cnNode = value;}}
+    public ConnectionNode _otherConnectionNode {get{return _cnNode;} set{if(value == null) onDisconnect?.Invoke(); _cnNode = value; afterDisconnect?.Invoke();}}
 
     public NodeState _currentNodeState;
 
@@ -30,6 +28,7 @@ public abstract class ConnectionNode : MonoBehaviour, IClickable
     public delegate void Connect();
     public Connect onConnect;
     public Connect onDisconnect;
+    public Connect afterDisconnect;
     public delegate void OnAmountChange(int amount);
     public OnAmountChange onAmountChange;
 
@@ -101,5 +100,16 @@ public abstract class ConnectionNode : MonoBehaviour, IClickable
         SystemLogger.instance.Log($"Changing {this} state to {nodeState}", this);
         _currentNodeState = nodeState;
         _currentNodeState.OnStateEnter();
+    }
+
+
+
+    private void OnDestroy() {
+        if(_currentNodeState as Connected == null) {
+            // ConnectNodes.instance.ClearLine();
+            ConnectNodes.instance.Clear();
+            return;
+        }
+        _currentNodeState.OnClick(); //disconnect nodes from destroyed machine
     }
 }
