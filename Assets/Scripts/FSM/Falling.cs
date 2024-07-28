@@ -24,6 +24,24 @@ public class Falling : InAir
 
 
 
+    public override void OnStateEnter()
+    {
+        base.OnStateEnter();
+
+        AnimationMaker animationMaker = _playerController._animationMaker;
+        animationMaker._minFramesPerSecond = 5;
+        animationMaker._maxFramesPerSecond = 5;
+        animationMaker._spriteList = _playerController._fallingAnimation;
+        animationMaker._pingpongAnimation = false;
+        animationMaker._loopAnimation = false;
+        animationMaker.animateForward();
+
+        _playerController._handAnimationMaker._spriteList = _playerController._handFallingAnimation;
+        _playerController._handAnimationMaker.animateForward();
+    }
+
+
+
     public override void Execute()
     {
         base.Execute();

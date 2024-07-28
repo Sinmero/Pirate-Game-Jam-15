@@ -10,6 +10,7 @@ public class Interactable : MonoBehaviour
     [HideInInspector] public string _interactKey;
     private BoxCollider2D _boxCollider2D;
     public float _interactTime = 1;
+    [SerializeField] bool _displayPopupMessage = true;
 
 
     void Start()
@@ -107,6 +108,7 @@ public class Interactable : MonoBehaviour
 
     public virtual string GetPopupMessage()
     {
+        if(!_displayPopupMessage) return "";
         return $"Press {_interactKey} to {_actionName} {_interactableName}";
     }
 

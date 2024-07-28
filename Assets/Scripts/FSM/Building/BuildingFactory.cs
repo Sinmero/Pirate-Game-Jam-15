@@ -23,7 +23,7 @@ public class BuildingFactory : BuildActive
         _buildingController.FollowHoloBuilding(_buildingController._factoryHologram.gameObject);
 
         if(Input.GetKeyDown(Controls.keys._confirm)) {
-            if(_buildingController.BuildFloorCheck() && _buildingController.BuildOverlapCheck()) { //check if the space we are building is valid
+            if(_buildingController.BuildFloorCheck() && _buildingController.BuildOverlapCheck(_buildingController._factoryHologram)) { //check if the space we are building is valid
                 _buildingController.InstantiateMachine(_buildingController._factoryGO);
             }
         }

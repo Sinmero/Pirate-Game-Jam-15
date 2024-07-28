@@ -1,0 +1,831 @@
+fileFormatVersion: 2
+guid: 75b1ad21e9c210a479daebcc14be1264
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4396315311773187872
+    second: DoorRunes_0
+  - first:
+      213: -4099440477992688664
+    second: DoorRunes_1
+  - first:
+      213: -7562275229183284455
+    second: DoorRunes_2
+  - first:
+      213: -1656314078865221665
+    second: DoorRunes_3
+  - first:
+      213: 7597619562928204822
+    second: DoorRunes_4
+  - first:
+      213: -2656078990882811629
+    second: DoorRunes_5
+  - first:
+      213: -5647024829859404543
+    second: DoorRunes_6
+  - first:
+      213: 1514739065551786511
+    second: DoorRunes_7
+  - first:
+      213: -7605431915924184923
+    second: DoorRunes_8
+  - first:
+      213: 5392951068647560616
+    second: DoorRunes_9
+  - first:
+      213: -5645092204269180794
+    second: DoorRunes_10
+  - first:
+      213: -1198898826042274028
+    second: DoorRunes_11
+  - first:
+      213: 464571804641588362
+    second: DoorRunes_12
+  - first:
+      213: 6457023602814346217
+    second: DoorRunes_13
+  - first:
+      213: -3449709112088767575
+    second: DoorRunes_14
+  - first:
+      213: -6267392788617132724
+    second: DoorRunes_15
+  - first:
+      213: -4218402960501294707
+    second: DoorRunes_16
+  - first:
+      213: 2026805433224666919
+    second: DoorRunes_17
+  - first:
+      213: 111356225530698805
+    second: DoorRunes_18
+  - first:
+      213: 3342353427466856457
+    second: DoorRunes_19
+  - first:
+      213: -4671610035275846948
+    second: DoorRunes_20
+  - first:
+      213: -7473347788459083611
+    second: DoorRunes_21
+  - first:
+      213: -9034764432813733669
+    second: DoorRunes_22
+  - first:
+      213: 2218192909216690313
+    second: DoorRunes_23
+  - first:
+      213: -8841581748370186184
+    second: DoorRunes_24
+  - first:
+      213: 52013612947943616
+    second: DoorRunes_25
+  - first:
+      213: 301305868293030378
+    second: DoorRunes_26
+  - first:
+      213: 1716915331849593875
+    second: DoorRunes_27
+  - first:
+      213: 1524470591725334336
+    second: DoorRunes_28
+  - first:
+      213: 5673692595272316801
+    second: DoorRunes_29
+  - first:
+      213: -2741217568808329736
+    second: DoorRunes_30
+  - first:
+      213: -1631528388106731564
+    second: DoorRunes_31
+  - first:
+      213: -805754115548805873
+    second: DoorRunes_32
+  - first:
+      213: 1310313232747557769
+    second: DoorRunes_33
+  - first:
+      213: 6978877877891327928
+    second: DoorRunes_34
+  - first:
+      213: 5847231716301496955
+    second: DoorRunes_35
+  - first:
+      213: -7400592527518612555
+    second: DoorRunes_36
+  - first:
+      213: -3476404886085641144
+    second: DoorRunes_37
+  - first:
+      213: -8816319585741771389
+    second: DoorRunes_38
+  - first:
+      213: 2451881304649790776
+    second: DoorRunes_39
+  - first:
+      213: 8137811409132850596
+    second: DoorRunes_40
+  - first:
+      213: 173026118755213254
+    second: DoorRunes_41
+  - first:
+      213: -5101749119227486593
+    second: DoorRunes_42
+  - first:
+      213: -9135244415068966485
+    second: DoorRunes_43
+  - first:
+      213: -7614115156764269201
+    second: DoorRunes_44
+  - first:
+      213: 6917161952885755890
+    second: DoorRunes_45
+  - first:
+      213: -9221107180636117814
+    second: DoorRunes_46
+  - first:
+      213: -6199103371901632251
+    second: DoorRunes_47
+  - first:
+      213: 5845896711101979518
+    second: DoorRunes_48
+  - first:
+      213: 1578487371474849371
+    second: DoorRunes_49
+  - first:
+      213: -2616342223849274490
+    second: DoorRunes_50
+  - first:
+      213: 387332468748054211
+    second: DoorRunes_51
+  - first:
+      213: -8765391493618420161
+    second: DoorRunes_52
+  - first:
+      213: -8550324789367067549
+    second: DoorRunes_53
+  - first:
+      213: -5611277350274138881
+    second: DoorRunes_54
+  - first:
+      213: 6188976601739553588
+    second: DoorRunes_55
+  - first:
+      213: -8420019181630231475
+    second: DoorRunes_56
+  - first:
+      213: -3169483831254613311
+    second: DoorRunes_57
+  - first:
+      213: 2127837626752641269
+    second: DoorRunes_58
+  - first:
+      213: -1939361547570258304
+    second: DoorRunes_59
+  - first:
+      213: -1056999557686692289
+    second: DoorRunes_60
+  - first:
+      213: 5668731166867777463
+    second: DoorRunes_61
+  - first:
+      213: 9112449490884103057
+    second: DoorRunes_62
+  - first:
+      213: -6578353143939297162
+    second: DoorRunes_63
+  - first:
+      213: 7794818635160095572
+    second: DoorRunes_64
+  - first:
+      213: 4491799624257249700
+    second: DoorRunes_65
+  - first:
+      213: -6245550245263632819
+    second: DoorRunes_66
+  - first:
+      213: -3129441894601875046
+    second: DoorRunes_67
+  - first:
+      213: 1350321150763974941
+    second: DoorRunes_68
+  - first:
+      213: -2479466240447123597
+    second: DoorRunes_69
+  - first:
+      213: -7064227784808245355
+    second: DoorRunes_70
+  - first:
+      213: 2616965722243016944
+    second: DoorRunes_71
+  - first:
+      213: -2869814057257168695
+    second: DoorRunes_72
+  - first:
+      213: 1186357002752923128
+    second: DoorRunes_73
+  - first:
+      213: -6010932118852755836
+    second: DoorRunes_74
+  - first:
+      213: -564314967686062302
+    second: DoorRunes_75
+  - first:
+      213: 7162105908047886486
+    second: DoorRunes_76
+  - first:
+      213: 7975715022032436864
+    second: DoorRunes_77
+  - first:
+      213: 4094780208436094567
+    second: DoorRunes_78
+  - first:
+      213: -5193179527395113598
+    second: DoorRunes_79
+  - first:
+      213: -8643320694977370902
+    second: DoorRunes_80
+  - first:
+      213: -1713623656992350583
+    second: DoorRunes_81
+  - first:
+      213: 4937662139899513544
+    second: DoorRunes_82
+  - first:
+      213: 9003077285005959663
+    second: DoorRunes_83
+  - first:
+      213: -659666436692414043
+    second: DoorRunes_84
+  - first:
+      213: 3429039743271039308
+    second: DoorRunes_85
+  - first:
+      213: -2114196309825984812
+    second: DoorRunes_86
+  - first:
+      213: -865752826191106690
+    second: DoorRunes_87
+  - first:
+      213: 1024199986320344349
+    second: DoorRunes_88
+  - first:
+      213: -7028595391527385973
+    second: DoorRunes_89
+  - first:
+      213: -5365024254453878533
+    second: DoorRunes_90
+  - first:
+      213: -3455843524405369472
+    second: DoorRunes_91
+  - first:
+      213: 96318603000089487
+    second: DoorRunes_92
+  - first:
+      213: -8540936423130176185
+    second: DoorRunes_93
+  - first:
+      213: 6915387941250606214
+    second: DoorRunes_94
+  - first:
+      213: -5973192489205419327
+    second: DoorRunes_95
+  - first:
+      213: 2495605802816435438
+    second: DoorRunes_96
+  - first:
+      213: 4889855326096327009
+    second: DoorRunes_97
+  - first:
+      213: -7689277635899980544
+    second: DoorRunes_98
+  - first:
+      213: 7376748257220453278
+    second: DoorRunes_99
+  - first:
+      213: -8973121099566407783
+    second: DoorRunes_100
+  - first:
+      213: -9198449377861600784
+    second: DoorRunes_101
+  - first:
+      213: -2779656309386939949
+    second: DoorRunes_102
+  - first:
+      213: -8512813096781456450
+    second: DoorRunes_103
+  - first:
+      213: 6785925777582282853
+    second: DoorRunes_104
+  - first:
+      213: 5970572176458500106
+    second: DoorRunes_105
+  - first:
+      213: -80357116270292642
+    second: DoorRunes_106
+  - first:
+      213: 5221853264219368001
+    second: DoorRunes_107
+  - first:
+      213: 2297539479834542115
+    second: DoorRunes_108
+  - first:
+      213: -3924897485388218410
+    second: DoorRunes_109
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DoorRunes_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0062144862df2c0800000000000000
+      internalID: -4396315311773187872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e36363ea9cdb17c0800000000000000
+      internalID: -4099440477992688664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b6bc6eeb66d0790800000000000000
+      internalID: -7562275229183284455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd792ccee179309e0800000000000000
+      internalID: -1656314078865221665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ce4e21dba207960800000000000000
+      internalID: 7597619562928204822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3115d05fa36b32bd0800000000000000
+      internalID: -2656078990882811629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1056b6226dcb1a1b0800000000000000
+      internalID: -5647024829859404543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f021f99972f650510800000000000000
+      internalID: 1514739065551786511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a0abefb7f3147690800000000000000
+      internalID: -7605431915924184923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a51dc18c6c97da40800000000000000
+      internalID: 5392951068647560616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68865389c8a98a1b0800000000000000
+      internalID: -5645092204269180794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f0e18aed7ac5fe0800000000000000
+      internalID: -1198898826042274028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84f25c489d727600800000000000000
+      internalID: 464571804641588362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3ef0881c4fb9950800000000000000
+      internalID: 6457023602814346217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3558307db2020d0800000000000000
+      internalID: -3449709112088767575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f9e5e222a899c48ab13ca04c26739a
+      internalID: 1456733128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorRunes_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbecd9564bd26f4da2b0f4013537804
+      internalID: -1101514996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1811bbeef944e2b4da1c4ddbbb376cde
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DoorRunes_0: -4396315311773187872
+      DoorRunes_1: -4099440477992688664
+      DoorRunes_10: -5645092204269180794
+      DoorRunes_11: -1198898826042274028
+      DoorRunes_12: 464571804641588362
+      DoorRunes_13: 6457023602814346217
+      DoorRunes_14: -3449709112088767575
+      DoorRunes_15: 1456733128
+      DoorRunes_16: -1101514996
+      DoorRunes_2: -7562275229183284455
+      DoorRunes_3: -1656314078865221665
+      DoorRunes_4: 7597619562928204822
+      DoorRunes_5: -2656078990882811629
+      DoorRunes_6: -5647024829859404543
+      DoorRunes_7: 1514739065551786511
+      DoorRunes_8: -7605431915924184923
+      DoorRunes_9: 5392951068647560616
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

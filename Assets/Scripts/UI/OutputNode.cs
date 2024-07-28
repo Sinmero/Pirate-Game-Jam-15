@@ -46,7 +46,9 @@ public class OutputNode : ConnectionNode
 
         SystemLogger.instance.Log($"Changing {_otherConnectionNode} icon", this);
         Sprite iconSprite = Items.instance._itemDictionary[_machine._resource]._icon;
+        Sprite stateSprite = Items.instance._statesDictionary[_machine._resourceState]._stateIcon;
         _otherConnectionNode._icon.sprite = iconSprite;
+        _otherConnectionNode._stateIcon.sprite = stateSprite;
 
         _otherConnectionNode._circleSprite.color = Items.instance._itemDictionary[_machine._resource]._itemColor;
     }
@@ -56,6 +58,7 @@ public class OutputNode : ConnectionNode
         if(_otherConnectionNode == null) return;
         SystemLogger.instance.Log($"Resetting {_otherConnectionNode} icon", this);
         _otherConnectionNode._icon.sprite = null;
+        _otherConnectionNode._stateIcon.sprite = null;
 
         _otherConnectionNode._circleSprite.color = Color.grey;
     }

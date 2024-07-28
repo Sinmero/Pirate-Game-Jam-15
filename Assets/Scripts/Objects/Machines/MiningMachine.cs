@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class MiningMachine : Machine
+public class MiningMachine : ScrappableMachine
 {
     private Coroutine _currentCoroutine;
     [HideInInspector] public ResourceVein _resourceVein;
@@ -13,7 +13,7 @@ public class MiningMachine : Machine
     {
         base.OnStart();
         _currentCoroutine = StartCoroutine(MineResource());
-        _resourceVein.gameObject.SetActive(false); //remove the vein when placed
+        // _resourceVein.gameObject.SetActive(false); //remove the vein when placed
     }
 
 
@@ -27,53 +27,21 @@ public class MiningMachine : Machine
 
 
 
-    public override void OnInteract(Interactor interactor)
-    {
-        base.OnInteract(interactor);
+    // public override void OnInteract(Interactor interactor)
+    // {
+    //     base.OnInteract(interactor);
 
-        Inventory.instance[_resource] += _resourceAmount;
-        _resourceAmount = 0;
-    }
-
-
-
-    public override void OnInteractSecondary(Interactor interactor)
-    {
-        base.OnInteractSecondary(interactor);
-
-        _resourceAmount += Inventory.instance[_resource]; //putting appropriate resource from inventory to factory
-        Inventory.instance[_resource] = 0;
-    }
+    //     Inventory.instance[_resource] += _resourceAmount;
+    //     _resourceAmount = 0;
+    // }
 
 
 
-    public override void OnInteractHold(Interactor interactor)
-    {
-        base.OnInteractHold(interactor);
+    // public override void OnInteractSecondary(Interactor interactor)
+    // {
+    //     base.OnInteractSecondary(interactor);
 
-        Inventory.instance["9"] += 1; //Returning the machine cost to player
-
-        Inventory.instance[_resource] += _resourceAmount; //giving the player contained resourses from this machine
-
-        _resourceVein.gameObject.SetActive(true);
-
-        Destroy(gameObject);
-    }
-
-
-
-    public override void OnHoldStart(Interactor interactor)
-    {
-        base.OnHoldStart(interactor);
-
-        _dissolveAnimation.StartAnimation(_interactTime);
-    }
-
-
-
-    public override void OnHoldRelease()
-    {
-        base.OnHoldRelease();
-        _dissolveAnimation.StopAnimation();
-    }
+    //     _resourceAmount += Inventory.instance[_resource]; //putting appropriate resource from inventory to factory
+    //     Inventory.instance[_resource] = 0;
+    // }
 }

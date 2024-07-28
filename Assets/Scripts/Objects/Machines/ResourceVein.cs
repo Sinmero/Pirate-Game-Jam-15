@@ -6,7 +6,7 @@ using UnityEngine;
 public class ResourceVein : MonoBehaviour
 {
     BoxCollider2D _boxCollider2D;
-    public string _resourceName = "♆";
+    public string _resourceName = "0";
 
 
 

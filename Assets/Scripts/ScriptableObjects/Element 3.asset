@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Element 3
   m_EditorClassIdentifier: 
   _itemName: 3
+  _defaultState: L
   _itemRecipe: None3
   _productionTime: 1
   _itemIndex: 3

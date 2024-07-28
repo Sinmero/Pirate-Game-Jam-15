@@ -12,8 +12,14 @@ public abstract class Machine : Interactable
     public event OnResourceAmountChange onResourceAmountChange;
     public delegate void OnResourceTypeChange();
     public event OnResourceTypeChange onResourceTypeChange;
+    public event OnResourceTypeChange onResourceStateChange;
+
+    public List<InputNode> _inputNodeList = new List<InputNode>();
+
     private string _rsrType = "";
     public string _resource {get{return _rsrType;} set{_rsrType = value; onResourceTypeChange?.Invoke();}}
+    private string _rsrState = "";
+    public string _resourceState {get {return _rsrState;} set{_rsrState = value; onResourceStateChange?.Invoke();}}
     private int _rsr = 0;
     public int _resourceAmount {get{return _rsr;} set{_rsr = value; onResourceAmountChange?.Invoke(_rsr);}}
     [SerializeField] private GameObject _uiGO;
@@ -24,7 +30,7 @@ public abstract class Machine : Interactable
     void Start()
     {
         _boxCollider2d = GetComponent<BoxCollider2D>();
-        _boxCollider2d.isTrigger = true;
+        // _boxCollider2d.isTrigger = true;
         OnStart();
     }
 
@@ -39,7 +45,7 @@ public abstract class Machine : Interactable
     public override void OnEnter(Interactor interactor)
     {
         base.OnEnter(interactor);
-        _uiGO?.SetActive(true);
+        if(_uiGO != null) _uiGO.SetActive(true);
     }
 
 
@@ -47,7 +53,7 @@ public abstract class Machine : Interactable
     public override void OnLeave(Interactor interactor)
     {
         base.OnLeave(interactor);
-        _uiGO?.SetActive(false);
+        if(_uiGO != null) _uiGO.SetActive(false);
     }
 
 

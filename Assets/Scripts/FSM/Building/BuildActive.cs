@@ -24,6 +24,18 @@ public class BuildActive : State
             _buildingController.ChangeState(_buildingController._buildingFactory);
             return;
         }
+        if(Input.GetKeyDown(Controls.keys._key3)) {
+            _buildingController.ChangeState(_buildingController._buildingTaurus);
+            return;
+        }
+        if(Input.GetKeyDown(Controls.keys._key4)) {
+            _buildingController.ChangeState(_buildingController._buildingCancer);
+            return;
+        }
+        if(Input.GetKeyDown(Controls.keys._key5)) {
+            _buildingController.ChangeState(_buildingController._buildingSolidifyer);
+            return;
+        }
         if(Input.GetKeyDown(Controls.keys._buildMenu)) {
             _buildingController.ChangeState(_buildingController._buildIdle);
         }

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class FactoryMachine : Machine
+public class FactoryMachine : ScrappableMachine
 {
-    [SerializeField] private InputNode _node1, _node2, _node3;
     public string _recipe = "";
     private Coroutine _currentCoroutine;
 
@@ -14,13 +13,12 @@ public class FactoryMachine : Machine
     public override void OnStart()
     {
         base.OnStart();
-        _node1.onConnect += NodeConnected;
-        _node2.onConnect += NodeConnected;
-        _node3.onConnect += NodeConnected;
 
-        _node1.afterDisconnect += NodeDisconnected;
-        _node2.afterDisconnect += NodeDisconnected;
-        _node3.afterDisconnect += NodeDisconnected;
+        foreach (InputNode item in _inputNodeList)
+        {
+            item.onConnect += NodeConnected;
+            item.onDisconnect += NodeDisconnected;
+        }
     }
 
 
@@ -28,6 +26,7 @@ public class FactoryMachine : Machine
     public override void NodeConnected()
     {
         base.NodeConnected();
+        if(_currentCoroutine != null) StopCoroutine(_currentCoroutine);
         GetRecipe();
         CheckRecipe();
     }
@@ -37,6 +36,7 @@ public class FactoryMachine : Machine
     public override void NodeDisconnected()
     {
         base.NodeDisconnected();
+        if(_currentCoroutine != null) StopCoroutine(_currentCoroutine);
         GetRecipe();
         CheckRecipe();
     }
@@ -47,15 +47,22 @@ public class FactoryMachine : Machine
     {
         ConnectionNode connectionNode = inputNode._otherConnectionNode;
         if (connectionNode == null) return "";
-        return connectionNode._machine._resource;
+        return connectionNode._machine._resource + connectionNode._machine._resourceState;
     }
 
 
 
     public void GetRecipe()
     {
-        _recipe = GetOtherResouceType(_node1) + GetOtherResouceType(_node2) + GetOtherResouceType(_node3);
-        Debug.Log(_recipe);
+        string recipe = "";
+        foreach (InputNode item in _inputNodeList)
+        {
+            recipe += GetOtherResouceType(item);
+        }
+
+        _recipe = recipe;
+
+        GameplayLogger.instance.Log($"Recipe changed at {this.name} tp {_recipe}", this);
     }
 
 
@@ -66,7 +73,9 @@ public class FactoryMachine : Machine
 
         if (!Items.instance._recipes.ContainsKey(_recipe)) return; //no such recipes exist
 
-        _resource = Items.instance._recipes[_recipe];
+        var resource = Items.instance._recipes[_recipe];
+        _resourceState = Items.instance._itemDictionary[resource]._defaultState;
+        _resource = resource;
 
         GameplayLogger.instance.Log($"{_resource} recipe was set on {this.name}", this);
 
@@ -79,7 +88,17 @@ public class FactoryMachine : Machine
     {
         yield return new WaitForSeconds(Items.instance._itemDictionary[_resource]._productionTime);
 
-        if (_node1.SpendRecource(1) && _node2.SpendRecource(1) && _node3.SpendRecource(1))
+        bool canProduce = true;
+
+        foreach (InputNode item in _inputNodeList)
+        {
+            if(!item.SpendRecource(1)) {
+                canProduce = false;
+                break;
+            }
+        }
+
+        if (canProduce)
         {
             _resourceAmount++;
             GameplayLogger.instance.Log($"{_resource} was pruduced. Totalamout is {_resourceAmount}", this);
@@ -90,51 +109,21 @@ public class FactoryMachine : Machine
 
 
 
-    public override void OnInteract(Interactor interactor)
-    {
-        base.OnInteract(interactor);
+    // public override void OnInteract(Interactor interactor)
+    // {
+    //     base.OnInteract(interactor);
 
-        Inventory.instance[_resource] += _resourceAmount;
-        _resourceAmount = 0;
-    }
-
-
-
-    public override void OnInteractSecondary(Interactor interactor)
-    {
-        base.OnInteractSecondary(interactor);
-
-        _resourceAmount += Inventory.instance[_resource]; //putting appropriate resource from inventory to factory
-        Inventory.instance[_resource] = 0;
-    }
+    //     Inventory.instance[_resource] += _resourceAmount;
+    //     _resourceAmount = 0;
+    // }
 
 
 
-    public override void OnInteractHold(Interactor interactor)
-    {
-        base.OnInteractHold(interactor);
+    // public override void OnInteractSecondary(Interactor interactor)
+    // {
+    //     base.OnInteractSecondary(interactor);
 
-        Inventory.instance["9"] += 1; //Returning the machine cost to player
-
-        if (_resource != "") Inventory.instance[_resource] += _resourceAmount; //giving the player contained resourses from this machine
-
-        Destroy(gameObject);
-    }
-
-
-
-    public override void OnHoldStart(Interactor interactor)
-    {
-        base.OnHoldStart(interactor);
-
-        _dissolveAnimation.StartAnimation(_interactTime);
-    }
-
-
-
-    public override void OnHoldRelease()
-    {
-        base.OnHoldRelease();
-        _dissolveAnimation.StopAnimation();
-    }
+    //     _resourceAmount += Inventory.instance[_resource]; //putting appropriate resource from inventory to factory
+    //     Inventory.instance[_resource] = 0;
+    // }
 }

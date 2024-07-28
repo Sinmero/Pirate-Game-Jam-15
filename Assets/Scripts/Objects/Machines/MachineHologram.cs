@@ -13,7 +13,7 @@ public class MachineHologram : MonoBehaviour
     void Start()
     {
         _boxCollider2d = GetComponent<BoxCollider2D>();
-        // _boxCollider2d.isTrigger = true;
+        _boxCollider2d.isTrigger = true;
     }
 
 

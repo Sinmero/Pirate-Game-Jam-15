@@ -37,6 +37,18 @@ public class Jumping : InAir
     public override void OnStateEnter()
     {
         base.OnStateEnter();
+
+        AnimationMaker animationMaker = _playerController._animationMaker;
+        animationMaker._minFramesPerSecond = 10;
+        animationMaker._maxFramesPerSecond = 10;
+        animationMaker._spriteList = _playerController._jumpingAnimation;
+        animationMaker._pingpongAnimation = false;
+        animationMaker._loopAnimation = false;
+        animationMaker.animateForward();
+
+        _playerController._handAnimationMaker._spriteList = _playerController._handJumpingAnimation;
+        _playerController._handAnimationMaker.animateForward();
+
         _releasedJump = false;
         // AudioManager.instance.PlaySoundClip(_audioClipOnEnter);
     }

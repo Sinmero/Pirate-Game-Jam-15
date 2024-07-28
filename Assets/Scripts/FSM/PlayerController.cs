@@ -14,9 +14,14 @@ public class PlayerController : StateMachineHandler
     [HideInInspector] public DoubleJump _doubleJump;
 
     [HideInInspector] public AnimationMaker _animationMaker;
+    public AnimationMaker _handAnimationMaker;
     public List<Sprite> _idleAnimation = new List<Sprite>();
     public List<Sprite> _runningAnimation = new List<Sprite>();
     public List<Sprite> _jumpingAnimation = new List<Sprite>();
+    public List<Sprite> _fallingAnimation = new List<Sprite>();
+    public List<Sprite> _handGroundedAnimation = new List<Sprite>();
+    public List<Sprite> _handJumpingAnimation = new List<Sprite>();
+    public List<Sprite> _handFallingAnimation = new List<Sprite>();
     public List<AudioClip> _audioClips = new List<AudioClip>();
 
     public ParticleSystem _doubleJumpParticles;

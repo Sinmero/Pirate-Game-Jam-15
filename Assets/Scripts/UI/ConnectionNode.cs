@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
-using System.Xml.Serialization;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(CircleCollider2D))]
@@ -12,6 +9,7 @@ public abstract class ConnectionNode : MonoBehaviour, IClickable
     public string _nodeType;
     private CircleCollider2D _circleCollider2D;
     public SpriteRenderer _icon;
+    public SpriteRenderer _stateIcon;
     [HideInInspector] public  SpriteRenderer _circleSprite;
     public Machine _machine;
 
@@ -89,8 +87,10 @@ public abstract class ConnectionNode : MonoBehaviour, IClickable
         }
         SystemLogger.instance.Log($"Setting {this.name} icon", this);
         Sprite iconSprite = Items.instance._itemDictionary[_machine._resource]._icon;
+        Sprite stateSprite = Items.instance._statesDictionary[_machine._resourceState]._stateIcon;
         _circleSprite.color = Items.instance._itemDictionary[_machine._resource]._itemColor;
         _icon.sprite = iconSprite; //setting the sprite
+        _stateIcon.sprite = stateSprite; //setting secondary sprite
     }
 
 

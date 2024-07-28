@@ -23,13 +23,6 @@ public class InAir : State
     public override void OnStateEnter()
     {
         base.OnStateEnter();
-        AnimationMaker animationMaker = _playerController._animationMaker;
-        animationMaker._minFramesPerSecond = 1;
-        animationMaker._maxFramesPerSecond = 1;
-        animationMaker._spriteList = _playerController._jumpingAnimation;
-        animationMaker._pingpongAnimation = false;
-        animationMaker._loopAnimation = false;
-        animationMaker.animateForward();
     }
 
 
@@ -43,7 +36,8 @@ public class InAir : State
             _moveVector.x = -1 * _playerController._moveSpeed;
             _rb.velocity = _moveVector;
 
-            if (!_spriteRenderer.flipX) _spriteRenderer.flipX = true;
+            if(_playerController.transform.localScale.x == 1) _playerController.transform.localScale = new Vector3(-1,1,1);
+            // if (!_spriteRenderer.flipX) _spriteRenderer.flipX = true;
         }
         if (Input.GetKey(Controls.keys._right))
         {
@@ -51,7 +45,8 @@ public class InAir : State
             _moveVector.x = _playerController._moveSpeed;
             _rb.velocity = _moveVector;
 
-            if (_spriteRenderer.flipX) _spriteRenderer.flipX = false;
+            if(_playerController.transform.localScale.x == -1) _playerController.transform.localScale = new Vector3(1,1,1);
+            // if (_spriteRenderer.flipX) _spriteRenderer.flipX = false;
         }
         if (Input.GetKeyUp(Controls.keys._left))
         {

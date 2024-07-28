@@ -11,6 +11,9 @@ public class BuildingController : StateMachineHandler
     [HideInInspector] public BuildIdle _buildIdle;
     [HideInInspector] public BuildingFactory _buildingFactory;
     [HideInInspector] public BuildingMiner _buildingMiner;
+    [HideInInspector] public BuildingTaurus _buildingTaurus;
+    [HideInInspector] public BuildingCancer _buildingCancer;
+    [HideInInspector] public BuildingSolidifyer _buildingSolidifyer;
     private float _machineSize = 4;
     private LayerMask _solid;
     private LayerMask _machines;
@@ -18,8 +21,14 @@ public class BuildingController : StateMachineHandler
 
     public GameObject _buildingUI;
     public MachineHologram _factoryHologram;
+    public MachineHologram _taurusHologram;
+    public MachineHologram _cancerHologram;
+    public MachineHologram _solidifyerHologram;
     public MinerHologram _minerHologram;
     public GameObject _factoryGO;
+    public GameObject _taurusGO;
+    public GameObject _cancerGO;
+    public GameObject _solidifyerGO;
     public GameObject _minerGO;
 
 
@@ -30,6 +39,9 @@ public class BuildingController : StateMachineHandler
         _buildIdle = new BuildIdle(this, _buildingUI);
         _buildingFactory = new BuildingFactory(this);
         _buildingMiner = new BuildingMiner(this);
+        _buildingTaurus = new BuildingTaurus(this);
+        _buildingCancer = new BuildingCancer(this);
+        _buildingSolidifyer = new BuildingSolidifyer(this);
 
         _solid = LayerMask.GetMask("Solid");
         _machines = LayerMask.GetMask("Machines");
@@ -51,6 +63,13 @@ public class BuildingController : StateMachineHandler
 
     public bool BuildFloorCheck()
     { //check if there are any empty tiles below the building
+
+        if(Inventory.instance["9"] <= 0) //ill just put this in here. nobody will notice for sure
+        {
+            GameplayLogger.instance.Log($"Not enough resources to build", this);
+            return false;
+        }
+
         Vector3 offset = new Vector3(0, -2 + 0.1f, 0);
 
         for (int i = 0; i < _machineSize; i++)
@@ -73,10 +92,9 @@ public class BuildingController : StateMachineHandler
 
 
 
-    public bool BuildOverlapCheck()
+    public bool BuildOverlapCheck(MachineHologram machineHologram)
     { //check if there any overlaps with solid ground or other machines
-        if(OverlapCheck(_solid) && _factoryHologram._machineList.Count == 0) {
-            Debug.Log(_factoryHologram._machineList.Count + " " + OverlapCheck(_solid));
+        if(OverlapCheck() && machineHologram._machineList.Count == 0) {
             PhysicsLogger.instance.Log($"Nothing is overlapping", this);
             return true;
         }
@@ -84,7 +102,7 @@ public class BuildingController : StateMachineHandler
     }
 
 
-    public bool OverlapCheck(LayerMask layerMask) {
+    public bool OverlapCheck() {
         RaycastHit2D[] overlapHit = Physics2D.BoxCastAll(_newPosition, new Vector2(_machineSize, _machineSize) * 0.9f, 0, Vector2.zero, 0, _solid);
         if (overlapHit.Length > 0)
         {
