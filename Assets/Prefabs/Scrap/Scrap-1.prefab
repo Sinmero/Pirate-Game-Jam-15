@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8043280456805887532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_Sprite: {fileID: -1995496882293042697, guid: 6bd840c8c9b19dd4e8eaaf8161516add, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,11 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac76e185b6356c4d8fbef66cb9db233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactableName: Scrap
-  _actionName: 
-  _interactKey: 
+  _interactableName: ruined machinery
+  _actionName: scrap
+  _interactKey: F
+  _interactKeyAction: Hold
   _interactTime: 1
-  _displayPopupMessage: 0
+  _displayPopupMessage: 1
   _inputNodeList: []
   _uiGO: {fileID: 0}
   _dissolveAnimation: {fileID: 6942862595760103487}

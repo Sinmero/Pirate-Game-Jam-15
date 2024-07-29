@@ -400,12 +400,14 @@ MonoBehaviour:
   _interactableName: Generic Name
   _actionName: interact with
   _interactKey: 
+  _interactKeyAction: Press
   _interactTime: 1
+  _displayPopupMessage: 0
   _inputNodeList:
   - {fileID: 2231523612357415547}
   _uiGO: {fileID: 9063627239435018784}
   _dissolveAnimation: {fileID: 0}
-  _desiredResourceAmount: 20
+  _desiredResourceAmount: 10
   _desiredResource: 3
   _desiredResourceState: S
   _icon: {fileID: 999368064937039122}
@@ -1109,7 +1111,7 @@ PrefabInstance:
       objectReference: {fileID: 4444762445036005206}
     - target: {fileID: 2014235822166178415, guid: c36ea68b4053bfb4b805c8484861605e, type: 3}
       propertyPath: __appendText
-      value: ' / 20'
+      value: ' / 10'
       objectReference: {fileID: 0}
     - target: {fileID: 2014235822166178415, guid: c36ea68b4053bfb4b805c8484861605e, type: 3}
       propertyPath: _connectionNode

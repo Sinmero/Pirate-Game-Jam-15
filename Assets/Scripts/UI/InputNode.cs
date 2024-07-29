@@ -57,4 +57,15 @@ public class InputNode : ConnectionNode
         _otherConnectionNode._machine._resourceAmount -= spendAmount;
         return true;
     }
+
+
+
+    public bool SpendRecource(int spendAmount, bool singleInput)
+    {
+        if (_otherConnectionNode == null && singleInput) return false; //it is ok if there is no output connected. this makes recipes with different amount of resources possible
+        if (_otherConnectionNode == null) return true;
+        if (_otherConnectionNode._machine._resourceAmount - spendAmount <= 0) return false; //not enough resources cant produce
+        _otherConnectionNode._machine._resourceAmount -= spendAmount;
+        return true;
+    }
 }

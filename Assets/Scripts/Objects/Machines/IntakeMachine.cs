@@ -26,8 +26,6 @@ public class IntakeMachine : Machine
 
         _icon.sprite = Items.instance._itemDictionary[_desiredResource]._icon;
         _stateIcon.sprite = Items.instance._statesDictionary[_desiredResourceState]._stateIcon;
-
-        Debug.Log("Setting Sprites!");
     }
 
 

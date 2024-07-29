@@ -6,6 +6,8 @@ public class Scrap : ScrappableMachine
 {
     [SerializeField] private string _resourceType = "0";
     [SerializeField] private int _containedResourceAmount = 0;
+    public delegate void OnScap();
+    public event OnScap onScrap;
 
 
 
@@ -14,6 +16,7 @@ public class Scrap : ScrappableMachine
         base.OnInteractHold(interactor);
 
         Inventory.instance[_resourceType] += _containedResourceAmount;
+        onScrap?.Invoke();
 
         Destroy(gameObject);
     }

@@ -56,7 +56,7 @@ public class ResourceStateChangingMachine : ScrappableMachine
 
         foreach (InputNode item in _inputNodeList)
         {
-            if(!item.SpendRecource(1)) {
+            if(!item.SpendRecource(1, true)) {
                 canProduce = false;
                 break;
             }

@@ -7,7 +7,8 @@ public class Interactable : MonoBehaviour
 {
     public string _interactableName = "Generic Name";
     public string _actionName = "interact with";
-    [HideInInspector] public string _interactKey;
+    public string _interactKey = "";
+    public string _interactKeyAction = "Press";
     private BoxCollider2D _boxCollider2D;
     public float _interactTime = 1;
     [SerializeField] bool _displayPopupMessage = true;
@@ -109,14 +110,14 @@ public class Interactable : MonoBehaviour
     public virtual string GetPopupMessage()
     {
         if(!_displayPopupMessage) return "";
-        return $"Press {_interactKey} to {_actionName} {_interactableName}";
+        return $"{_interactKeyAction} {_interactKey} to {_actionName} {_interactableName}";
     }
 
 
 
     public virtual void Init()
     {
-        _interactKey = Controls.keys._interact.ToString();
+        if(_interactKey == "") _interactKey = Controls.keys._interact.ToString();
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _boxCollider2D.isTrigger = true;
     }

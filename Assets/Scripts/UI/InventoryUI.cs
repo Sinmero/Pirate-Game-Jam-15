@@ -8,6 +8,7 @@ public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private GameObject _inventorySlotGO;
     [SerializeField] private GameObject _inventoryGO;
+    [SerializeField] private GameObject _knowledgeTab;
     private Dictionary<string, InventorySlot> _inventorySlots = new Dictionary<string, InventorySlot>();
 
 
@@ -24,6 +25,10 @@ public class InventoryUI : MonoBehaviour
         if (Input.GetKeyDown(Controls.keys._inventory))
         {
             _inventoryGO.SetActive(!_inventoryGO.activeSelf);
+        }
+
+        if(Input.GetKeyDown(Controls.keys._tab)) { //this probably shouldnt be here
+            _knowledgeTab.SetActive(!_knowledgeTab.activeSelf);
         }
     }
 

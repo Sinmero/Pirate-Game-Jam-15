@@ -69,6 +69,7 @@ public class BuildingController : StateMachineHandler
             GameplayLogger.instance.Log($"Not enough resources to build", this);
             return false;
         }
+        
 
         Vector3 offset = new Vector3(0, -2 + 0.1f, 0);
 
@@ -86,6 +87,8 @@ public class BuildingController : StateMachineHandler
                 return false;
             }
         }
+
+        Inventory.instance["9"] -= 1; //spend resource on building
 
         return true;
     }

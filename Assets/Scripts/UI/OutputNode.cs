@@ -60,6 +60,6 @@ public class OutputNode : ConnectionNode
         _otherConnectionNode._icon.sprite = null;
         _otherConnectionNode._stateIcon.sprite = null;
 
-        _otherConnectionNode._circleSprite.color = Color.grey;
+        _otherConnectionNode._circleSprite.color = Items.instance._itemDictionary["Blue"]._itemColor;
     }
 }
