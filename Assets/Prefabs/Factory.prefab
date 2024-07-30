@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 4788921908478142443}
   - component: {fileID: 7433487106006804302}
   - component: {fileID: -4352279908023801017}
+  - component: {fileID: -8111458767968092863}
   m_Layer: 0
   m_Name: Factory
   m_TagString: Untagged
@@ -212,6 +213,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3d27263a0cc1942870e2442bd91dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8111458767968092863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277438289071029030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e1ed5f2b486e545b3d79ef41485872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteList:
+  - {fileID: 1548066267976332344, guid: 62aa42ca52530914c860e401e1664ba8, type: 3}
+  - {fileID: -6139211444752797567, guid: 62aa42ca52530914c860e401e1664ba8, type: 3}
+  - {fileID: -3333985699779472354, guid: 62aa42ca52530914c860e401e1664ba8, type: 3}
+  - {fileID: 4121073142764609003, guid: 62aa42ca52530914c860e401e1664ba8, type: 3}
+  - {fileID: 3273037109070631372, guid: 62aa42ca52530914c860e401e1664ba8, type: 3}
+  - {fileID: 8558527063952778961, guid: 62aa42ca52530914c860e401e1664ba8, type: 3}
+  _minFramesPerSecond: 8
+  _maxFramesPerSecond: 8
+  _playOnStart: 1
+  _loopAnimation: 1
+  _pingpongAnimation: 0
+  _randomFrames: 0
+  _thisSR: {fileID: 0}
+  _spriteListLength: 0
+  _currentSpriteIndex: 0
+  _animationDirection: 1
 --- !u!1001 &2619800790468057376
 PrefabInstance:
   m_ObjectHideFlags: 0

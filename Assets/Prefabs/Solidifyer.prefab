@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2241230643093110693}
   - component: {fileID: 2721855732871758439}
   - component: {fileID: 8927082981506687906}
+  - component: {fileID: -5046633044287970016}
   m_Layer: 0
   m_Name: Solidifyer
   m_TagString: Untagged
@@ -173,6 +174,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3d27263a0cc1942870e2442bd91dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5046633044287970016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870674457165557950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e1ed5f2b486e545b3d79ef41485872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteList:
+  - {fileID: -6587148628845752617, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: -3397700525620622603, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 5755914957343643682, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 1411730230531366815, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: -5653726070021327431, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 6961954719538159710, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 5689366310440056839, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: -9068539936640242338, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: -3610430739754154717, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 7498193085721332556, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 3282158714927044807, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 2280406540513371366, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: -5147114653243346360, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 7045903162309027745, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: 1973944168101515683, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: -1495043163241824033, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: -1645847127654528402, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  - {fileID: -2849753035239754522, guid: 81f38ea67586dcc42b3d0dcb5b9e47b2, type: 3}
+  _minFramesPerSecond: 8
+  _maxFramesPerSecond: 8
+  _playOnStart: 1
+  _loopAnimation: 1
+  _pingpongAnimation: 0
+  _randomFrames: 0
+  _thisSR: {fileID: 0}
+  _spriteListLength: 0
+  _currentSpriteIndex: 0
+  _animationDirection: 1
 --- !u!1 &8030531699742959830
 GameObject:
   m_ObjectHideFlags: 0
