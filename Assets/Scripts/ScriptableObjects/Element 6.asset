@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: 6
   _defaultState: L
-  _itemRecipe: 3G7S5G
+  _itemRecipe: 4S7S5G
   _productionTime: 1
   _itemIndex: 6
   _icon: {fileID: 21300000, guid: 28dd4c6b718577b41ae00bcba9eee7d0, type: 3}

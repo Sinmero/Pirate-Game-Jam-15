@@ -24,7 +24,10 @@ public class BuildingCancer : BuildActive
         if(Input.GetKeyDown(Controls.keys._confirm)) {
             if(_buildingController.BuildFloorCheck() && _buildingController.BuildOverlapCheck(_buildingController._cancerHologram)) { //check if the space we are building is valid
                 _buildingController.InstantiateMachine(_buildingController._cancerGO);
+                return;
             }
+
+            AudioManager.instance.PlaySoundClip(AudioManager.instance._buzz);
         }
     }
 

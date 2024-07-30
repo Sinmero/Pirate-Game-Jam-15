@@ -24,7 +24,9 @@ public class BuildingSolidifyer : BuildActive
         if(Input.GetKeyDown(Controls.keys._confirm)) {
             if(_buildingController.BuildFloorCheck() && _buildingController.BuildOverlapCheck(_buildingController._solidifyerHologram)) { //check if the space we are building is valid
                 _buildingController.InstantiateMachine(_buildingController._solidifyerGO);
+                return;
             }
+            AudioManager.instance.PlaySoundClip(AudioManager.instance._buzz);
         }
     }
 

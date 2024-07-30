@@ -17,5 +17,5 @@ MonoBehaviour:
   _itemRecipe: None11
   _productionTime: 1
   _itemIndex: 11
-  _icon: {fileID: 2278923165976917721, guid: b448c6b4beb159744af7d5f558991611, type: 3}
+  _icon: {fileID: 21300000, guid: b448c6b4beb159744af7d5f558991611, type: 3}
   _itemColor: {r: 0, g: 0.014112941, b: 0.3018868, a: 1}

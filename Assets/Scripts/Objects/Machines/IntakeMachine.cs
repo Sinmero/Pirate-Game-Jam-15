@@ -47,8 +47,6 @@ public class IntakeMachine : Machine
         var _resource = connectionNode._machine._resource;
         var _resourceState = connectionNode._machine._resourceState;
 
-        Debug.Log(_resource + _resourceState);
-
         if (_resource + _resourceState != _desiredResource + _desiredResourceState) return;
 
         onStartedGettingResource?.Invoke();

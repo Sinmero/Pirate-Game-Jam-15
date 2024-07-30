@@ -25,7 +25,10 @@ public class BuildingFactory : BuildActive
         if(Input.GetKeyDown(Controls.keys._confirm)) {
             if(_buildingController.BuildFloorCheck() && _buildingController.BuildOverlapCheck(_buildingController._factoryHologram)) { //check if the space we are building is valid
                 _buildingController.InstantiateMachine(_buildingController._factoryGO);
+                return;
             }
+
+            AudioManager.instance.PlaySoundClip(AudioManager.instance._buzz);
         }
     }
 

@@ -19,5 +19,6 @@ public class TeleportationStone : Interactable
         if(!_otherTeleportationStone._isActive) return;
 
         interactor.transform.parent.position = _otherTeleportationStone.transform.position;
+        Camera.main.gameObject.transform.position = _otherTeleportationStone.transform.position;
     }
 }

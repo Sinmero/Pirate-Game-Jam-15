@@ -150,10 +150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5940b0be87664754ab4d88ed08818ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactableName: Taurus
-  _actionName: 
-  _interactKey: 
+  _interactableName: machine
+  _actionName: disassemble
+  _interactKey: F
+  _interactKeyAction: Hold
   _interactTime: 1
+  _displayPopupMessage: 1
   _inputNodeList:
   - {fileID: 6270930285974702177}
   _uiGO: {fileID: 5525568173885187657}

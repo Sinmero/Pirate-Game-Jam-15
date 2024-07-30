@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Element 1
   m_EditorClassIdentifier: 
   _itemName: 1
+  _defaultState: S
   _itemRecipe: None1
   _productionTime: 1
   _itemIndex: 1
-  _icon: {fileID: 4846500034443737209, guid: 0a1328306d74a0f4a838c3dbe1a15633, type: 3}
+  _icon: {fileID: 21300000, guid: 0a1328306d74a0f4a838c3dbe1a15633, type: 3}
   _itemColor: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}

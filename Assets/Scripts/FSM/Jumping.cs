@@ -50,7 +50,7 @@ public class Jumping : InAir
         _playerController._handAnimationMaker.animateForward();
 
         _releasedJump = false;
-        // AudioManager.instance.PlaySoundClip(_audioClipOnEnter);
+        AudioManager.instance.PlaySoundClip(_playerController._jumpingSound, 0.1f);
     }
 
 

@@ -26,6 +26,8 @@ public class PlayerController : StateMachineHandler
 
     public ParticleSystem _doubleJumpParticles;
 
+    public AudioClip _jumpingSound, _landingSound;
+
 
     public delegate void OnExecute();
     public event OnExecute onExecute;

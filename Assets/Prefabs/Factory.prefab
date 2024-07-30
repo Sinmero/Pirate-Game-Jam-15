@@ -187,10 +187,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a28b55691eb0c541baad27003eab074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactableName: Factory
-  _actionName: interact with
-  _interactKey: 
+  _interactableName: machine
+  _actionName: disassemble
+  _interactKey: F
+  _interactKeyAction: Hold
   _interactTime: 1
+  _displayPopupMessage: 1
   _inputNodeList:
   - {fileID: 7831814875553760219}
   - {fileID: 3315277344740990890}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.Mathematics;
 
 public class Falling : InAir
 {
@@ -58,7 +59,7 @@ public class Falling : InAir
         if (collisions.Length > 0)
         {
             OnLanded?.Invoke((collisions[0]));
-            // AudioManager.instance.PlaySoundClip(_audioClipOnEnter);
+            AudioManager.instance.PlaySoundClip(_playerController._landingSound);
             PhysicsLogger.instance.Log($"Landed on {collisions[0].transform.name}", _playerController);
             _stateMachineHandler.ChangeState(_playerController._idle); //changing state to grounded when colliding with solid object with out bottom
         }

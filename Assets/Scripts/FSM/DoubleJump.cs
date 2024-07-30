@@ -24,8 +24,8 @@ public class DoubleJump : Jumping
     public override void OnStateEnter()
     {
         
-        base.OnStateEnter();
         if(_totalJumps <= 0) return;
+        base.OnStateEnter();
         // AudioManager.instance.PlaySoundClip(_audioClipOnEnter);
         _moveVector.y = 0;
         _moveVector.x = _rb.velocity.x;

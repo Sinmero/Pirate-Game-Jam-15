@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1741440125454480952}
   - component: {fileID: -8207512929242592522}
   - component: {fileID: 4040422783607202353}
+  - component: {fileID: -1117178252864881023}
   m_Layer: 0
   m_Name: Miner
   m_TagString: Untagged
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 073f3fa16570b2f499bd930324d45d1c, type: 3}
+  m_Sprite: {fileID: 3876497900317922485, guid: 073f3fa16570b2f499bd930324d45d1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,10 +150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd8aa33f85ccd841bc9bf1c1c7569b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactableName: Mining machine
-  _actionName: interact with
-  _interactKey: 
+  _interactableName: machine
+  _actionName: disassemble
+  _interactKey: F
+  _interactKeyAction: Hold
   _interactTime: 1
+  _displayPopupMessage: 1
   _inputNodeList: []
   _uiGO: {fileID: 6487393386123188865}
   _dissolveAnimation: {fileID: 4040422783607202353}
@@ -169,6 +172,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3d27263a0cc1942870e2442bd91dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1117178252864881023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745206083062854905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e1ed5f2b486e545b3d79ef41485872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteList:
+  - {fileID: 3876497900317922485, guid: 073f3fa16570b2f499bd930324d45d1c, type: 3}
+  - {fileID: -19205320, guid: 073f3fa16570b2f499bd930324d45d1c, type: 3}
+  - {fileID: 1762344450, guid: 073f3fa16570b2f499bd930324d45d1c, type: 3}
+  - {fileID: 905352255, guid: 073f3fa16570b2f499bd930324d45d1c, type: 3}
+  - {fileID: -1588008915, guid: 073f3fa16570b2f499bd930324d45d1c, type: 3}
+  - {fileID: 1712801991, guid: 073f3fa16570b2f499bd930324d45d1c, type: 3}
+  _minFramesPerSecond: 8
+  _maxFramesPerSecond: 8
+  _playOnStart: 1
+  _loopAnimation: 1
+  _pingpongAnimation: 0
+  _randomFrames: 0
+  _thisSR: {fileID: 0}
+  _spriteListLength: 0
+  _currentSpriteIndex: 0
+  _animationDirection: 1
 --- !u!1 &6487393386123188865
 GameObject:
   m_ObjectHideFlags: 0

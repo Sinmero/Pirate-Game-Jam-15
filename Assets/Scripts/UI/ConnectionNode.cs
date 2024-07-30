@@ -53,6 +53,9 @@ public abstract class ConnectionNode : MonoBehaviour, IClickable
     public void IOnClick()
     {
         SystemLogger.instance.Log($"Player clicked on {this}", this);
+
+        AudioManager.instance.PlaySoundClip(AudioManager.instance._click);
+
         OnNodeClick();
     }
 
