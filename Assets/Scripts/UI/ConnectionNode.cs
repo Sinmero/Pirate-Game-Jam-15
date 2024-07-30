@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -29,6 +30,7 @@ public abstract class ConnectionNode : MonoBehaviour, IClickable
     public Connect afterDisconnect;
     public delegate void OnAmountChange(int amount);
     public OnAmountChange onAmountChange;
+    public Action OnTypeChange;
 
 
 
@@ -108,7 +110,7 @@ public abstract class ConnectionNode : MonoBehaviour, IClickable
 
 
     private void OnDestroy() {
-        if(_currentNodeState as Connected == null) {
+        if(_currentNodeState as Connected == null && ConnectNodes.instance._currentLineRenderer == _connectionLine) {
             // ConnectNodes.instance.ClearLine();
             ConnectNodes.instance.Clear();
             return;

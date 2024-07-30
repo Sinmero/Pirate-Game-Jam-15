@@ -55,7 +55,7 @@ public class TutorialShadow2 : NPC
             "Press <color=#FFFF00>'B'</color><color=#FFFFFF> to toggle your build menu. You can select a machine by pressing number keys.",
             "Press <color=#FFFF00>'1'</color><color=#FFFFFF> to select the pump machine, then get near the transport node and press <color=#FFFF00>'Space'</color><color=#FFFFFF> key to place the machine.",
             "You will notice that it has a circular node above with a symbol inscribed on it. This is an output node. Pump machines only have output nodes but other will also have input nodes.",
-            "You can <color=#FFFF00>'Left click'</color><color=#FFFFFF> nodes to connect them and transfer materials between machines.",
+            "You can <color=#FFFF00>'Left click'</color><color=#FFFFFF> nodes to connect them and transfer materials between machines or disconnect already connected nodes.",
             "Empty input nodes are always blue and output are green.{OnScrapSecondary}"
         };
         dialoguesDictionary.Add("scrapDialogue", scrapDialogue);

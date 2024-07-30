@@ -35,6 +35,8 @@ public class IntakeMachine : Machine
         base.NodeConnected();
         if (_currentCoroutine != null) StopCoroutine(_currentCoroutine);
         CheckInputResource();
+
+        _inputNodeList[0].OnTypeChange = CheckInputResource;
     }
 
 

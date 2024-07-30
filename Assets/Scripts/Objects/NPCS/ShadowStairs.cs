@@ -17,7 +17,7 @@ public class ShadowStairs : NPC
         var startDialogue = new List<string>() {
             "Welcome to our home.",
             "I can't believe they sent someone to deal with this mess after all this time.",
-            "I suppose you want to know the reason why this facility is a mess.",
+            "I suppose you want to know the reason why this facility is in ruins.",
             "No it was not exactly the dust storm.",
             "They did not inform you on what we were doing in here, did they?",
             "Our original goal was to produce various exotic matters. Until we discovered something really special.",

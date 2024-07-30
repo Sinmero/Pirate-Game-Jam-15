@@ -12,6 +12,7 @@ public class OutputNode : ConnectionNode
         base.OnStart();
         _machine.onResourceTypeChange += SetNodeIcon; //change the icon when machine resource type changes
         _machine.onResourceTypeChange += InputIconChange;
+        _machine.onResourceTypeChange += SetLineRendererColor;
         onConnect += InputIconChange;
         onConnect += OnClick; //probably bad idea
         onDisconnect += InputIconReset;
@@ -30,11 +31,7 @@ public class OutputNode : ConnectionNode
     {
         base.OnClick();
 
-        if (_machine._resource == "" || _connectionLine == null) return;
-        _resourceColor = Items.instance._itemDictionary[_machine._resource]._itemColor;
-
-        _connectionLine.startColor = _resourceColor;
-        _connectionLine.endColor = _resourceColor;
+        SetLineRendererColor();
     }
 
 
@@ -45,6 +42,9 @@ public class OutputNode : ConnectionNode
         if (_machine._resource == "") return;
 
         SystemLogger.instance.Log($"Changing {_otherConnectionNode} icon", this);
+
+        _otherConnectionNode.OnTypeChange?.Invoke(); //telling input node that the output resource changed
+
         Sprite iconSprite = Items.instance._itemDictionary[_machine._resource]._icon;
         Sprite stateSprite = Items.instance._statesDictionary[_machine._resourceState]._stateIcon;
         _otherConnectionNode._icon.sprite = iconSprite;
@@ -61,5 +61,15 @@ public class OutputNode : ConnectionNode
         _otherConnectionNode._stateIcon.sprite = null;
 
         _otherConnectionNode._circleSprite.color = Items.instance._itemDictionary["Blue"]._itemColor;
+    }
+
+
+
+    public void SetLineRendererColor () {
+        if (_machine._resource == "" || _connectionLine == null) return;
+        _resourceColor = Items.instance._itemDictionary[_machine._resource]._itemColor;
+
+        _connectionLine.startColor = _resourceColor;
+        _connectionLine.endColor = _resourceColor;
     }
 }
