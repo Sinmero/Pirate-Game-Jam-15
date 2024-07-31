@@ -15,14 +15,14 @@ public class ShadowPyramid : NPC
         _intakeMachine.onStartedGettingResource += FinalDialogue;
 
         var startDialogue = new List<string>() {
-            "This place used to be quite a marvel of engineering, you know?",
-            "The best technology humanity could offer. The brightest of minds working in here.",
-            "Then the dust storms came, covering the whole planet in shadow, slowly corroding this place.",
-            "Even people, if explosed long enough will start to transform.|Pause(0,5)| Changing shape.",
-            "I havent seen the sunlight for so long, I am not even sure what it is like anymore.",
+            "Did you know? This place used to be quite a marvel of engineering.",
+            "It housed the best technology and brightest minds that humanity could offer.",
+            "Then came the dust storms, covering the whole planet in shadow and creeping corrosion.",
+            "Even people, if exposed long enough, will start to transform.|Pause(0,5)| Changing shape...",
+            "I haven't seen the sunlight for so long, I'm unsure what it is like anymore.",
             "...",
-            "Have my knowledge. It might come handy.",
-            "I don't have much use for it anymore anyway.{GainKnowledge}{SecondDialogue}"
+            "Have my knowledge. It might come in handy.",
+            "I don't have much use for it anymore.{GainKnowledge}{SecondDialogue}"
         };
 
         dialoguesDictionary["startDialogue"] = startDialogue;

@@ -18,7 +18,7 @@ public class TutorialShadow3 : NPC
             "A piece of advice.",
             "The machines you build can alter the state of materials or even <color=#bfb7ff>change</color> them into something completely new.",
             "Knowledge is power. Don't worry, I will share mine with you.{GainKnowledge} Use it.",
-            "Get Closer to that sealed door. It will reveal its secrets",
+            "Get closer to that sealed door. It will reveal its secrets",
             "Press <color=#FFFF00>'Tab'</color> key to toggle you knowledge screen.",
         };
 

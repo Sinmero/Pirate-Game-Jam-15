@@ -18,15 +18,15 @@ public class ShadowStairs : NPC
             "Welcome to our home.",
             "I can't believe they sent someone to deal with this mess after all this time.",
             "I suppose you want to know the reason why this facility is in ruins.",
-            "No it was not exactly the dust storm.",
-            "They did not inform you on what we were doing in here, did they?",
-            "Our original goal was to produce various exotic matters. Until we discovered something really special.",
+            "No... it was not exactly the dust storm.",
+            "They did not inform you of our work, did they?",
+            "Our original goal was to produce various exotic matters. One day, we discovered something really special.",
             "Something that is no less than a miracle.",
             "A way to peak beyond the veil of existence!",
-            "Needless to say we were extremely cautious about it.|Pause(0,3)| But the superiors pushed the matter despite our protests.",
-            "We were rushed to proceed with the project and made a mistake, letting things get their way in our reality.",
-            "I would urge you not to go through the process again but I know that you won't listen.",
-            "Have my knowledge and please leave me be. I will not be responsible for what happens next.{GainKnowledge}{SecondDialogue}"
+            "Needless to say, we were extremely cautious.|Pause(0,3)| But our superiors pushed the matter, despite our protests.",
+            "In our haste, we made a mistake. We paid with our lives... our very reality.",
+            "I would urge you not to repeat the process, but I know that you won't listen.",
+            "Have my knowledge and, please, leave me be. I will not be responsible for what happens next.{GainKnowledge}{SecondDialogue}"
         };
 
         dialoguesDictionary["startDialogue"] = startDialogue;

@@ -15,7 +15,7 @@ public class TutorialShadow2 : NPC
 
 
         var startDialogue = new List<string>() {
-            "So you made it in here? |Pause(0,3)|Good.",
+            "So you made it inside? |Pause(0,3)|Good.",
             "Did they tell you what this facility was built for?",
             "I thought so.",
             "See that heap of metal to the right of you? It used to be a pump machine but now it is junk.",
